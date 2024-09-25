@@ -25,7 +25,6 @@ function solution(N, input, DP) {
     DP[0][0] = 1;
   
     solution(N, input, DP);
-    console.log(DP);
     console.log(DP[N - 1][N - 1].toString());
   }
   
