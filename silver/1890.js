@@ -21,7 +21,9 @@ function solution(N, input, DP) {
   
     const N = Number(input.shift());
     input = input.map(x => x.split(' ').map(x => Number(x)));
-    let DP = new Array(N).fill(null).map(x=>new Array(N).fill(BigInt(0)));
+    let DP = Array(N).fill().map(() => Array(N).fill(0n));
+    console.log(DP);
+
     DP[0][0] = 1;
   
     solution(N, input, DP);
